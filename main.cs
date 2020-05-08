@@ -9,7 +9,8 @@ class MainClass {
       Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n>> Deseja cadastrar um novo cliente? (s/n");
       opcao = Console.ReadLine();
       
-      if (opcao == "s"){
+      if (opcao == "s")
+      {
       FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
       Console.WriteLine("**CADASTRO DO CLIENTE**");
       Console.Write("Nome: ");
@@ -23,7 +24,16 @@ class MainClass {
       Console.Write("Data de nascimento: ");
       c.DataNascimento = Console.ReadLine();
       File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nEndereco: " +c.Endereco + "\nTelefone: "+c.Telefone +"\nE-mail: " +c.Email + "\nData de nascimento: " +c.DataNascimento);
+      }
+      /*else
+      {
+        Console.WriteLine("Deseja contar os cadastros ativos? (s/n)");
+        opcao = Console.ReadLine();
+        if(opcao == "s"){
+          FileStream meuArq = new FileStream("clientescadastrados.txt", FileMode.Open, FileAccess.Read);
+          File.AppendText("clientescadastrados.txt");
 
+        }*/
       }
       
       

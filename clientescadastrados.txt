@@ -1,0 +1,19 @@
+** CLIENTES CADASTRADOS **
+
+Nome: Raquel Girelli de Oliveira
+Endereço: Avenida Rio Amazonas, número 1094, Novo Porto Canoa, Serra-ES
+Telefone: (27) 99817-5667
+E-mail: rgirelli@ucl.br
+Data de nascimento: 17-04-1998
+
+Nome: Márcia Girelli de Oliveira
+Endereço: Avenida Rio Amazonas, número 1094, Novo Porto Canoa, Serra-ES
+Telefone: (27) 99844-9613
+E-mail: mgirelli@outlook.com
+Data de nascimento: 25-02-1966
+
+Nome: Diego Nascimento Ferrari
+Endereço: Rua Goiás, número 330, Estância Monazídica, Serra-ES 
+Telefone: (27)99788-4649
+E-mail: diegoferrari@hotmail.com
+Data de nascimento: 10-07-1989
