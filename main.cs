@@ -1,68 +1,67 @@
 using System;
-
+using System.IO;
 class MainClass {
   public static void Main (string[] args) {
-      Cadastro de clientes e clientes cadastrados
-      Cliente c1 = new Cliente();
-      Cliente c2 = new Cliente();
-      Cliente c3 = new Cliente();
-      Cliente c4 = new Cliente();
-     
-      Console.WriteLine("Cadastrar cliente: ");
-      Console.WriteLine(">> Informe o nome do cliente: ");
-      c1.nome = Console.ReadLine();
-      Console.WriteLine(">> Informe o endereço do cliente: ");
-      c1.endereco = Console.ReadLine();
-      Console.WriteLine(">> Informe o telefone: ");
-      c1.telefone = Console.ReadLine();
-      Console.WriteLine(">> Informe o e-mail: ");
-      c1.email = Console.ReadLine();
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
-      c1.ImprimirDados();
-      Console.WriteLine();
-      Console.WriteLine("Cadastrar cliente: ");
-      Console.WriteLine(">> Informe o nome do cliente: ");
-      c2.nome = Console.ReadLine();
-      Console.WriteLine(">> Informe o endereço do cliente: ");
-      c2.endereco = Console.ReadLine();
-      Console.WriteLine(">> Informe o telefone: ");
-      c2.telefone = Console.ReadLine();
-      Console.WriteLine(">> Informe o e-mail: ");
-      c2.email = Console.ReadLine();
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
+      //string nome, endereco, telefone, email;
+      Cliente c = new Cliente();
+      string opcao;
+
+      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n>> Deseja cadastrar um novo cliente? (s/n");
+      opcao = Console.ReadLine();
       
-      c2.ImprimirDados();
-      Console.WriteLine();
+      if (opcao == "s"){
+      FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
+      Console.WriteLine("**CADASTRO DO CLIENTE**");
+      Console.Write("Nome: ");
+      c.Nome = Console.ReadLine();
+      Console.Write("Endereço: ");
+      c.Endereco = Console.ReadLine();
+      Console.Write("Telefone: ");
+      c.Telefone = Console.ReadLine();
+      Console.Write("E-mail: ");
+      c.Email = Console.ReadLine();
+      Console.Write("Data de nascimento: ");
+      c.DataNascimento = Console.ReadLine();
+      File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nEndereco: " +c.Endereco + "\nTelefone: "+c.Telefone +"\nE-mail: " +c.Email + "\nData de nascimento: " +c.DataNascimento);
 
-      Console.WriteLine(">> Clientes cadastrados: ");
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
-      c1.ImprimirDados();
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
-      c2.ImprimirDados();
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
-      c3.nome = "Amanda Kelly";
-      c3.endereco = "Rua Sto. Antonio, n 35, Serra-ES";
-      c3.telefone = "(27) 99885-5519";
-      c3.email = "amandakelly@ucl.br";
-      c3.ImprimirDados();
-      Console.WriteLine();
-      Console.WriteLine();
-      Console.WriteLine("Dados do cliente: ");
-      c3.nome = "Diego Ferrari";
-      c3.endereco = "R. Goiás, Estância Monazídica, n 300, Serra-ES";
-      c3.telefone = "(27) 99918-0522";
-      c3.email = "diegof@ucl.br";
-      c3.ImprimirDados();
-      Console.WriteLine();
+      }
+      
+      
 
-      //Produtos
-     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      /*
+      //CLIENTES
+      Cliente c = new Cliente();
+      //c.CadastrarCliente();
+          
+      Console.WriteLine(" **CADASTRO DE CLIENTE** ");
+      Console.Write(">> Nome: ");
+      c.nome = Console.ReadLine();
+      Console.WriteLine();
+      Console.Write(">> Endereço: ");
+      c.endereco = Console.ReadLine();
+      Console.WriteLine();
+      Console.Write(">> Telefone: ");
+      c.telefone = Console.ReadLine();
+      Console.WriteLine();
+      Console.Write(">> E-mail: ");
+      c.email = Console.ReadLine();
+      Console.WriteLine();
+      
+      //Console.WriteLine(c.CadastrarCliente());
+      
 
+    
+    /*PRODUTOS
     string opcao;
     Produto p = new Produto();
     Produto p1 = new Produto();
@@ -126,7 +125,7 @@ class MainClass {
     Console.WriteLine(">> O valor da taxa de entrega considerando o valor atual do litro da gasolina a R$3.59 para essa localidade é: R$ " + entrega.CalcularLitrosViagem().ToString("F2"));
     //Console.WriteLine("O tempo estimado de entrega é: " + ********);
 
-    
+    */
 
 
 

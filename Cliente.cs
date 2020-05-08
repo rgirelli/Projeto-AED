@@ -1,10 +1,15 @@
 using System;
-class Cliente{
-  public string nome;
-  public string endereco;
-  public string telefone;
-  public string email;
+using System.IO;
 
+class Cliente{
+  
+  private string nome;
+  private string endereco;
+  private string telefone;
+  private string email;
+  private string dataNascimento;
+  
+  
   public string Nome{
     get{
       return nome;
@@ -41,11 +46,28 @@ class Cliente{
     }
   }
 
-  public void ImprimirDados(){
+  public string DataNascimento{
+    get{
+      return dataNascimento;
+    }
+    set{
+      dataNascimento = value;
+    }
+  }
+  
+  
+  public void ImprimirDados()
+  {
     Console.WriteLine("Nome: " + nome);
     Console.WriteLine("Endereço: " + endereco);
     Console.WriteLine("Telefone: " + telefone);
     Console.WriteLine("E-mail: " + email);
   }
+
+  public void EfetuarCadastro()
+  {
+    Console.WriteLine("Cadastro efetuado com sucesso!");
+  }
+  
   
 }
