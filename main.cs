@@ -5,36 +5,43 @@ class MainClass {
       //string nome, endereco, telefone, email;
       Cliente c = new Cliente();
       string opcao;
+     
 
-      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n>> Deseja cadastrar um novo cliente? (s/n");
-      opcao = Console.ReadLine();
       
+      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n>> Deseja cadastrar um novo cliente? (s/n)");
+      opcao = Console.ReadLine();
+
       if (opcao == "s")
       {
-      FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
-      Console.WriteLine("**CADASTRO DO CLIENTE**");
-      Console.Write("Nome: ");
-      c.Nome = Console.ReadLine();
-      Console.Write("Endereço: ");
-      c.Endereco = Console.ReadLine();
-      Console.Write("Telefone: ");
-      c.Telefone = Console.ReadLine();
-      Console.Write("E-mail: ");
-      c.Email = Console.ReadLine();
-      Console.Write("Data de nascimento: ");
-      c.DataNascimento = Console.ReadLine();
-      File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nEndereco: " +c.Endereco + "\nTelefone: "+c.Telefone +"\nE-mail: " +c.Email + "\nData de nascimento: " +c.DataNascimento);
+        FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
+
+        Console.WriteLine("**CADASTRO DO CLIENTE**");
+        Console.Write("Nome: ");
+        c.Nome = Console.ReadLine();
+        Console.Write("Endereço: ");
+        c.Endereco = Console.ReadLine();
+        Console.Write("Telefone: ");
+        c.Telefone = Console.ReadLine();
+        Console.Write("E-mail: ");
+        c.Email = Console.ReadLine();
+        Console.Write("Data de nascimento: ");
+        c.DataNascimento = Console.ReadLine();
+        File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nEndereco: " +c.Endereco + "\nTelefone: "+c.Telefone +"\nE-mail: " +c.Email + "\nData de nascimento: " +c.DataNascimento);
+        
       }
-      /*else
+
+      else
       {
-        Console.WriteLine("Deseja contar os cadastros ativos? (s/n)");
+        Console.WriteLine("Deseja exibir cadastros ativos? (s/n)");
         opcao = Console.ReadLine();
         if(opcao == "s"){
-          FileStream meuArq = new FileStream("clientescadastrados.txt", FileMode.Open, FileAccess.Read);
-          File.AppendText("clientescadastrados.txt");
+          string[] lines = File.ReadAllLines("clientescadastrados.txt");
 
-        }*/
+          foreach(var line in lines) Console.WriteLine(line);
+
+        }
       }
+      
       
       
 
