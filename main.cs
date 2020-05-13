@@ -2,7 +2,7 @@ using System;
 
 class MainClass {
   public static void Main (string[] args) {
-      //Cadastro de clientes e clientes cadastrados
+      Cadastro de clientes e clientes cadastrados
       Cliente c1 = new Cliente();
       Cliente c2 = new Cliente();
       Cliente c3 = new Cliente();
