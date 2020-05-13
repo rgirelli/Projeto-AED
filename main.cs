@@ -2,7 +2,7 @@ using System;
 using System.IO;
 class MainClass {
   public static void Main (string[] args) {
-      //string nome, endereco, telefone, email;
+     
       Cliente c = new Cliente();
       string opcao;
      
