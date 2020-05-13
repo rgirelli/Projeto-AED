@@ -1,0 +1,29 @@
+CARDAPIO 
+
+FATIAS(13,00)
+Ninho com Brigadeiro e Morango
+Ninho com Frutas Vermelhas
+Ninho Duplo com Morangos
+Red Velvet
+Ninho com Nutella e Brigadeiro 
+
+BOLOS NO POTE (10,0)
+Ninho com Brigadeiro e Morangos
+Ninho com Morangos 
+Ninho com Nutella
+Ninho com Frutas Vermelhas
+Mousse de Limão
+Napolitano
+Ninho com Paçoca
+
+CONE TRUFADO(7,00)
+Kinder Bueno
+Ninho com Nutella
+Ninho com Morango
+
+TRUFAS(2,50)
+Ninho
+Coco 
+Brigadeiro 
+Maracujá
+
