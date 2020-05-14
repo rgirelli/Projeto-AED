@@ -1,6 +1,6 @@
 **CADASTRO DO CLIENTE**
-Nome: s
-Endereco: s
-Telefone: s
-E-mail: s
-Data de nascimento: s
+Nome: rsdyas
+Endereco: fasfsdfsa
+Telefone: asdfasfasd
+E-mail: asdefgasdfas
+Data de nascimento: sdasd

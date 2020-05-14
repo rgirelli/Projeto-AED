@@ -13,7 +13,7 @@ class MainClass {
 
       if (opcao == "s")
       {
-        FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
+        //FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
 
         Console.WriteLine("**CADASTRO DO CLIENTE**");
         Console.Write("Nome: ");
