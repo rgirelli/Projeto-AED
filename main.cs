@@ -5,7 +5,9 @@ class MainClass {
      
       Cliente c = new Cliente();
       string opcao;
+      //Inicialização
       Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
+      //Exibição de cardápio
       Console.WriteLine("Deseja visualizar o cardápio?");
       opcao = Console.ReadLine();
       if (opcao == "s") {
@@ -15,13 +17,12 @@ class MainClass {
     }
      
 
-      
+      //Etapa de cadastro de cliente
       Console.WriteLine("\n>> Deseja cadastrar um novo cliente? (s/n)");
       opcao = Console.ReadLine();
 
       if (opcao == "s")
       {
-        //FileStream meuArq = new FileStream("cadastrocliente.txt", FileMode.Open, FileAccess.Read);
 
         Console.WriteLine("**CADASTRO DO CLIENTE**");
         Console.Write("Nome: ");
@@ -49,124 +50,57 @@ class MainClass {
 
         }
       }
-      
-      
-      
+      //Consulta de preços
+      Produto p = new Produto();
+      Console.WriteLine("Gostaria de consultar valores? (s/n) ");
+      opcao = Console.ReadLine();
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      /*
-      //CLIENTES
-      Cliente c = new Cliente();
-      //c.CadastrarCliente();
-          
-      Console.WriteLine(" **CADASTRO DE CLIENTE** ");
-      Console.Write(">> Nome: ");
-      c.nome = Console.ReadLine();
+      if(opcao == "s"){
+        Console.WriteLine("Código do produto: 1 - Fatias\n2 - Bolos no Pote\n3 - Cone Trufado\n4 - Trufa");
+        Console.WriteLine("Informe o código do produto desejado para consultar o preço: ");
+        opcao = Console.ReadLine();
+        if (opcao == "1"){
+          Console.WriteLine(">> Fatia R$13,00 und.");
+        }
+        if (opcao == "2"){
+          Console.WriteLine(">> Bolo no Pote R$10,00 und.");
+        }
+        if (opcao == "3"){
+          Console.WriteLine(">> Cone Trufado R$7,00 und.");
+        }
+        if (opcao == "4"){
+          Console.WriteLine(">> Trufa R$2,50 und.");
+        }
+
+      }
       Console.WriteLine();
-      Console.Write(">> Endereço: ");
-      c.endereco = Console.ReadLine();
       Console.WriteLine();
-      Console.Write(">> Telefone: ");
-      c.telefone = Console.ReadLine();
-      Console.WriteLine();
-      Console.Write(">> E-mail: ");
-      c.email = Console.ReadLine();
-      Console.WriteLine();
-      
-      //Console.WriteLine(c.CadastrarCliente());
-      
+      //Registrar pedido
+      Console.WriteLine("** PEDIDO **");
+      Console.WriteLine(">> Gostaria de utilizar o último cadastro efetuado de cliente para iniciar pedido? (s/n) ");
+      opcao = Console.ReadLine();
+      if (opcao == "s"){
+      string[] lines1 = File.ReadAllLines("cadastro.txt");
 
-    
-    /*PRODUTOS
-    string opcao;
-    Produto p = new Produto();
-    Produto p1 = new Produto();
-    Produto p2 = new Produto();
-    Produto p3 = new Produto();
-    Produto p4 = new Produto();
-    Console.WriteLine("Tabela de preços: ");
-    p.InformarPrecos();
-    Console.WriteLine();
-    //Primeiro produto
-    p1.AdicionarProduto();
-    Console.WriteLine("Informações sobre o produto escolhido: ");
-    Console.WriteLine(p1.CodigoProduto);
-    Console.WriteLine(p1.QuantidadeProduto + " unidades");
-    Console.WriteLine("R$" + p1.ValorProduto.ToString("F2") + " cada");
-    p1.CalcularTotal();
-    Console.WriteLine("Total item 1: R$" + p1.CalcularTotal().ToString("F2"));
-    double valor1 = p1.CalcularTotal();
-    Console.WriteLine();
-    
-    
-    p2.AdicionarProduto();
-    Console.WriteLine("Informações sobre o produto escolhido: ");
-    Console.WriteLine(p2.CodigoProduto);
-    Console.WriteLine(p2.QuantidadeProduto + " unidades");
-    Console.WriteLine("R$" + p2.ValorProduto.ToString("F2") + " cada");
-    p2.CalcularTotal();
-    Console.WriteLine("Total item 2: R$" + p2.CalcularTotal().ToString("F2"));
-    double valor2 = p2.CalcularTotal();
-    Console.WriteLine();
+        foreach(var line in lines1 ) Console.WriteLine(line);
+        Console.WriteLine(">> Informe o código do produto, quantidade desejada e o código do sabor: ");
+  }     
+      else{
+        Console.WriteLine(">> Gostaria de utilizar os cadastros anteriores de clientes? (s/n)");
+        opcao = Console.ReadLine();
+        if(opcao == "s"){
+          string[] lines2 = File.ReadAllLines("clientescadastrados.txt");
 
-    p3.AdicionarProduto();
-    Console.WriteLine("Informações sobre o produto escolhido: ");
-    Console.WriteLine(p3.CodigoProduto);
-    Console.WriteLine(p3.QuantidadeProduto + " unidades");
-    Console.WriteLine("R$" + p3.ValorProduto.ToString("F2") + " cada");
-    p3.CalcularTotal();
-    Console.WriteLine("Total item32: R$" + p3.CalcularTotal().ToString("F2"));
-    double valor3 = p3.CalcularTotal();
-    Console.WriteLine();
-
-    p4.AdicionarProduto();
-    Console.WriteLine("Informações sobre o produto escolhido: ");
-    Console.WriteLine(p4.CodigoProduto);
-    Console.WriteLine(p4.QuantidadeProduto + " unidades");
-    Console.WriteLine("R$" + p4.ValorProduto.ToString("F2") + " cada");
-    p4.CalcularTotal();
-    Console.WriteLine("Total item 4: R$" + p4.CalcularTotal().ToString("F2"));
-    double valor4 = p4.CalcularTotal();
-    Console.WriteLine();
-
-    double orcamento = valor1 + valor2 + valor3 + valor4;
-    Console.WriteLine("Valor total do orçamento: R$" + orcamento.ToString("F2"));
-
-    Entrega entrega = new Entrega();
-    Console.WriteLine("Informe a distância da entrega em km: ");
-    entrega.distanciaPercorrida = double.Parse(Console.ReadLine());
-    Console.WriteLine("Resumo da entrega: ");
-    entrega.CalcularLitrosViagem();
-    Console.WriteLine("A distância a ser percorrida na entrega é: " + entrega.distanciaPercorrida + "km");
-    Console.WriteLine(">> O valor da taxa de entrega considerando o valor atual do litro da gasolina a R$3.59 para essa localidade é: R$ " + entrega.CalcularLitrosViagem().ToString("F2"));
-    //Console.WriteLine("O tempo estimado de entrega é: " + ********);
-
-    */
-
-
-
-    
-
-
-
-   
-
-      
+        foreach(var line in lines2 ) Console.WriteLine(line);
+        
+        Console.WriteLine(">> Informe o código do cliente desejado: ");
+        opcao = Console.ReadLine();
+        }
+      }        
+}
     
   }
-    
-     
+            
 
       
-
-      
-  }
+  

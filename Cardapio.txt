@@ -1,28 +1,28 @@
 ** CARDÁPIO **
 
 1- FATIAS(R$ 13,00)
-Ninho com Brigadeiro e Morango
-Ninho com Frutas Vermelhas
-Ninho Duplo com Morangos
-Red Velvet
-Ninho com Nutella e Brigadeiro 
+1.1 Ninho com Brigadeiro e Morango
+1.2 Ninho com Frutas Vermelhas
+1.3 Ninho Duplo com Morangos
+1.4 Red Velvet
+1.5 Ninho com Nutella e Brigadeiro 
 
 2- BOLOS NO POTE(R$ 10,00)
-Ninho com Brigadeiro e Morangos
-Ninho com Morangos 
-Ninho com Nutella
-Ninho com Frutas Vermelhas
-Mousse de Limão
-Napolitano
-Ninho com Paçoca
+2.1 Ninho com Brigadeiro e Morangos
+2.2 Ninho com Morangos 
+2.3 Ninho com Nutella
+2.4 Ninho com Frutas Vermelhas
+2.5 Mousse de Limão
+2.6 Napolitano
+2.7 Ninho com Paçoca
 
 3- CONE TRUFADO(R$ 7,00)
-Kinder Bueno
-Ninho com Nutella
-Ninho com Morango
+3.1 Kinder Bueno
+3.2 Ninho com Nutella
+3.3 Ninho com Morango
 
 4- TRUFAS(R$ 2,50)
-Ninho
-Coco 
-Brigadeiro 
-Maracujá
+4.1 Ninho
+4.2 Coco 
+4.3 Brigadeiro 
+4.4 Maracujá
