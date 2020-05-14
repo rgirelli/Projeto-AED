@@ -5,6 +5,15 @@ class MainClass {
      
       Cliente c = new Cliente();
       string opcao;
+
+      string opcao;
+      Console.WriteLine("Deseja Visualizar o Cardápio?");
+      opcao = Console.ReadLine();
+      if (opcao == "s") {
+        string[] lines = File.ReadAllLines("Cardapio.txt");
+
+        foreach(var line in lines ) Console.WriteLine(line);
+    }
      
 
       
