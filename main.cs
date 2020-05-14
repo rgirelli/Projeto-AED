@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class MainClass {
   public static void Main (string[] args) {
@@ -7,7 +8,36 @@ class MainClass {
       Cliente c2 = new Cliente();
       Cliente c3 = new Cliente();
       Cliente c4 = new Cliente();
-     
+
+      string opcao;
+      Console.WriteLine("Deseja Visualizar o Cardápio?");
+      opcao = Console.ReadLine();
+      if (opcao == "s") {
+        string[] lines = File.ReadAllLines("Cardapio.txt");
+
+        foreach(var line in lines ) Console.WriteLine(line);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*
       //Console.WriteLine("Cadastrar cliente: ");
       //Console.WriteLine(">> Informe o nome do cliente: ");
       //c1.nome = Console.ReadLine();
@@ -124,7 +154,7 @@ class MainClass {
     entrega.CalcularLitrosViagem();
     Console.WriteLine("A distância a ser percorrida na entrega é: " + entrega.distanciaPercorrida + "km");
     Console.WriteLine(">> O valor da taxa de entrega considerando o valor atual do litro da gasolina a R$3.59 para essa localidade é: R$ " + entrega.CalcularLitrosViagem().ToString("F2"));
-    //Console.WriteLine("O tempo estimado de entrega é: " + ********);
+    //Console.WriteLine("O tempo estimado de entrega é: " + ********);*/
 
     
 
