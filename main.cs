@@ -16,7 +16,7 @@ class MainClass {
      
 
       
-      Console.WriteLine(">> Deseja cadastrar um novo cliente? (s/n)");
+      Console.WriteLine("\n>> Deseja cadastrar um novo cliente? (s/n)");
       opcao = Console.ReadLine();
 
       if (opcao == "s")
