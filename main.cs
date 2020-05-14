@@ -5,9 +5,8 @@ class MainClass {
      
       Cliente c = new Cliente();
       string opcao;
-
-      string opcao;
-      Console.WriteLine("Deseja Visualizar o Cardápio?");
+      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
+      Console.WriteLine("Deseja visualizar o cardápio?");
       opcao = Console.ReadLine();
       if (opcao == "s") {
         string[] lines = File.ReadAllLines("Cardapio.txt");
@@ -17,7 +16,7 @@ class MainClass {
      
 
       
-      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n>> Deseja cadastrar um novo cliente? (s/n)");
+      Console.WriteLine(">> Deseja cadastrar um novo cliente? (s/n)");
       opcao = Console.ReadLine();
 
       if (opcao == "s")
