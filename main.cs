@@ -2,77 +2,49 @@ using System;
 using System.IO;
 class MainClass {
   public static void Main (string[] args) {
-     
-      Cliente c = new Cliente();
       string opcao;
+      Cliente c = new Cliente();
+      Cardapio cardapio = new Cardapio();
+      Produto p = new Produto();
+      Pedido pedido = new Pedido();
+      
       //Inicialização
       Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
-      //Exibição de cardápio
-      Console.WriteLine("Deseja visualizar o cardápio?");
-      opcao = Console.ReadLine();
-      if (opcao == "s") {
-        string[] lines = File.ReadAllLines("Cardapio.txt");
-
-        foreach(var line in lines ) Console.WriteLine(line);
-    }
-     
-
-      //Etapa de cadastro de cliente
-      Console.WriteLine("\n>> Deseja cadastrar um novo cliente? (s/n)");
+      Console.WriteLine(">> Selecione a opção desejada para prosseguir: ");
+      Console.WriteLine();
+      Console.WriteLine("1- Exibir cardápio\n2- Exibir clientes cadastrados\n3- Cadastrar cliente\n4- Consultar preço\n5- Registrar pedido\n6- Entrega\n7- Exibir estoque\n8- Compras (reposição de estoque)");
       opcao = Console.ReadLine();
 
-      if (opcao == "s")
+      if (opcao == "1")
       {
-
-        Console.WriteLine("**CADASTRO DO CLIENTE**");
-        Console.Write("Nome: ");
-        c.Nome = Console.ReadLine();
-        Console.Write("Endereço: ");
-        c.Endereco = Console.ReadLine();
-        Console.Write("Telefone: ");
-        c.Telefone = Console.ReadLine();
-        Console.Write("E-mail: ");
-        c.Email = Console.ReadLine();
-        Console.Write("Data de nascimento: ");
-        c.DataNascimento = Console.ReadLine();
-        File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nEndereco: " +c.Endereco + "\nTelefone: "+c.Telefone +"\nE-mail: " +c.Email + "\nData de nascimento: " +c.DataNascimento);
-        
-      }
-
-      else
+        cardapio.ExibirCardapio();        
+      } 
+      if (opcao == "2")
       {
-        Console.WriteLine("Deseja exibir cadastros ativos? (s/n)");
-        opcao = Console.ReadLine();
-        if(opcao == "s"){
-          string[] lines = File.ReadAllLines("clientescadastrados.txt");
-
-          foreach(var line in lines) Console.WriteLine(line);
-
-        }
+        c.ClientesCadastrados();
       }
-      //Consulta de preços
-      Produto p = new Produto();
-      Console.WriteLine("Gostaria de consultar valores? (s/n) ");
-      opcao = Console.ReadLine();
-
-      if(opcao == "s"){
-        Console.WriteLine("Código do produto: 1 - Fatias\n2 - Bolos no Pote\n3 - Cone Trufado\n4 - Trufa");
-        Console.WriteLine("Informe o código do produto desejado para consultar o preço: ");
-        opcao = Console.ReadLine();
-        if (opcao == "1"){
-          Console.WriteLine(">> Fatia R$13,00 und.");
-        }
-        if (opcao == "2"){
-          Console.WriteLine(">> Bolo no Pote R$10,00 und.");
-        }
-        if (opcao == "3"){
-          Console.WriteLine(">> Cone Trufado R$7,00 und.");
-        }
-        if (opcao == "4"){
-          Console.WriteLine(">> Trufa R$2,50 und.");
-        }
-
+      
+      if (opcao == "3")
+      { 
+        c.CadastrarCliente();
       }
+
+      if (opcao == "4")
+      {
+        p.ConsultarPreco();
+      }
+
+      if (opcao == "5")
+      {
+        pedido.FazerPedido();
+      }
+
+      
+              
+             
+    
+
+      /*
       Console.WriteLine();
       Console.WriteLine();
       //Registrar pedido
@@ -96,10 +68,11 @@ class MainClass {
         Console.WriteLine(">> Informe o código do cliente desejado: ");
         opcao = Console.ReadLine();
         }
-      }        
-}
+      }  */      
+
     
   }
+}
             
 
       

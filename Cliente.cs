@@ -54,14 +54,29 @@ class Cliente{
       dataNascimento = value;
     }
   }
-  
-  
-  public void ImprimirDados()
+
+  public void CadastrarCliente()
   {
-    Console.WriteLine("Nome: " + nome);
-    Console.WriteLine("Endereço: " + endereco);
-    Console.WriteLine("Telefone: " + telefone);
-    Console.WriteLine("E-mail: " + email);
+    Console.WriteLine("**CADASTRO DO CLIENTE**");
+        Console.Write("Nome: ");
+        Nome = Console.ReadLine();
+        Console.Write("Endereço: ");
+        Endereco = Console.ReadLine();
+        Console.Write("Telefone: ");
+        Telefone = Console.ReadLine();
+        Console.Write("E-mail: ");
+        Email = Console.ReadLine();
+        Console.Write("Data de nascimento: ");
+        DataNascimento = Console.ReadLine();
+        File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +Nome + "\nEndereco: " +Endereco + "\nTelefone: "+Telefone +"\nE-mail: " +Email + "\nData de nascimento: " +DataNascimento);
+  }
+  
+  
+  public void ClientesCadastrados()
+  {
+    string[] lines = File.ReadAllLines("clientescadastrados.txt");
+
+      foreach(var line in lines) Console.WriteLine(line);
   }
 
   public void EfetuarCadastro()

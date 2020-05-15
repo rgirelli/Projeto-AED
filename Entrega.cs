@@ -1,68 +1,37 @@
+using System;
+using System.IO;
 class Entrega{
-  public double taxaEntrega;
-  public double tempoEstimado;
-  //distancia a ser percorrida em km
-  public double distanciaPercorrida;
-  public double precoGasolina;
-  //public double valorGasolina = 3.59;
+  //Levar em consideração ficha técnica da Honda CG 150 Titan EX Mix Flex 2010 a 2015
   
-  public double consumoMoto = 14.0;
-  //metodo para calcular gastos mensais com gasolina
-  //metodo p calcular entrega (valor) atraves da KM e preco da gasolina
-  //considerando que a moto faz 14km/litro
-  
+  private double distanciaKM;
+  private double litrosGasolina;
+  private double precoLitro;
 
-  public double TaxaEntrega{
+  public void DistanciaKM
+  {
     get{
-      return taxaEntrega;
+      return distanciaKM;
     }
     set{
-      taxaEntrega = value;
+      distanciaKM = value;
     }
   }
 
-  public double TempoEstimado{
+  public void LitrosGasolina
+  {
     get{
-      return tempoEstimado;
+    return litrosGasolina;
     }
     set{
-      tempoEstimado = value;
+      litrosGasolina = value;
     }
   }
 
-  public double DistanciaPercorrida{
-    get{
-      return distanciaPercorrida;
-    }
-    set{
-      distanciaPercorrida = value;
-    }
-  }
-  
-  public double PrecoGasolina{
-    get{
-      return precoGasolina;
-    }
-    set{
-      precoGasolina = value;
-    }
+  public void PrecoLitro
+  {
+    
   }
 
-  //public double ValorGasolina{
-    //get{
-      //return valorGasolina;
-   // }
-    //set{
-     // valorGasolina = value;
-   // }
-  //}
 
-  public double CalcularLitrosViagem(){
-    return (distanciaPercorrida/consumoMoto)*3.59;
-   
-  }
 
-  //public double CalcularTempo(){
-    //cálculo de tempo estimado
-  //}
 }
