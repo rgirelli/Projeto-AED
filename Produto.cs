@@ -1,13 +1,18 @@
+//Para uso do console
 using System;
+
+//Classe produto
 class Produto{
   
-
+//atributos da classe produto
   private string nomeProduto;
   private string codigoProduto;
   private double valorProduto;
   private int quantidadeProduto;
   private string opcao; 
 
+
+//Tornando os atributos publicos para serem utilizados 
   public string NomeProduto{
     get{
       return nomeProduto;
@@ -49,6 +54,7 @@ class Produto{
      Console.WriteLine("Código do produto: \n1 - Fatias\n2 - Bolos no Pote\n3 - Cone Trufado\n4 - Trufa");
      Console.WriteLine("Informe o código do produto desejado para consultar o preço: ");
         opcao = Console.ReadLine();
+        //Condicional para Consultar preços por código 
         if (opcao == "1"){
           Console.WriteLine(">> Fatia R$13,00 und.");
         }

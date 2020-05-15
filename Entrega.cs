@@ -40,6 +40,13 @@ class Entrega{
     }
   }
 
+  public void CalcularCombustivel()
+  {
+    Console.WriteLine(">> **VALOR DO COMBUSTÍVEL POR ENTREGA**  ");
+    //dividir a quilometragem pelo consumo da moto
+    
+  }
+
 
 
 }

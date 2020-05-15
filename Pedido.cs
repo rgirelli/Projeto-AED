@@ -1,8 +1,12 @@
+//Para uso do console
 using System;
+// Manipulação de arquivos
 using System.IO;
 
+//Classe Pedido 
 class Pedido{
   
+  //Atributos da classe pedido 
   private string codigoProduto;
   private int qtd;
   private double valorUnitario;
@@ -10,6 +14,7 @@ class Pedido{
   string continuar = "s";
   double total;
 
+//Tornando os atributos publicos para serem utilizados 
   public string CodigoProduto{
     get{
       return codigoProduto;
@@ -48,6 +53,7 @@ class Pedido{
 
   public void FazerPedido()
   { 
+    // Percorre todas as Linhas e guarda dentro da variável
     string[] lines = File.ReadAllLines("Cardapio.txt");
 
       foreach(var line in lines) Console.WriteLine(line);
@@ -57,7 +63,7 @@ class Pedido{
     Qtd = int.Parse(Console.ReadLine());
     Sabor = Console.ReadLine();
     Console.WriteLine();
-
+    // Condicional para cada código de produto
     if (CodigoProduto == "1")
     {
       total = 13*Qtd;
@@ -86,6 +92,7 @@ class Pedido{
     Console.WriteLine(">> \nDeseja inserir mais itens ao pedido? (s/n) ");
     continuar = Console.ReadLine();
 
+    //Condicional para o programa continuar executando pedidos
     while (continuar == "s")
     {
         Console.WriteLine();
@@ -94,7 +101,7 @@ class Pedido{
     Qtd = int.Parse(Console.ReadLine());
     Sabor = Console.ReadLine();
     Console.WriteLine();
-
+ // Condicional para cada código de produto
     if (CodigoProduto == "1")
     {
       total = 13*Qtd;

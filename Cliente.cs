@@ -1,15 +1,17 @@
+//Para uso de Console 
 using System;
+// Manipulação de Arquivos
 using System.IO;
-
+//Classe Cliente 
 class Cliente{
-  
+  // Atributos da classe cliente
   private string nome;
   private string endereco;
   private string telefone;
   private string email;
   private string dataNascimento;
   
-  
+  //Tornando os atributos publicos para serem utilizados 
   public string Nome{
     get{
       return nome;
@@ -57,6 +59,8 @@ class Cliente{
 
   public void CadastrarCliente()
   {
+    
+    //Coleta de Dados para armazenar no arquivo txt
     Console.WriteLine("**CADASTRO DO CLIENTE**");
         Console.Write("Nome: ");
         Nome = Console.ReadLine();
@@ -74,6 +78,7 @@ class Cliente{
   
   public void ClientesCadastrados()
   {
+    // Percorre todas as Linhas e guarda dentro da variável
     string[] lines = File.ReadAllLines("clientescadastrados.txt");
 
       foreach(var line in lines) Console.WriteLine(line);
