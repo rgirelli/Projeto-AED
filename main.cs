@@ -10,6 +10,7 @@ class MainClass {
       Cardapio cardapio = new Cardapio();
       Produto p = new Produto();
       Pedido pedido = new Pedido();
+      Entrega entrega = new Entrega();
       
       //Inicialização
       Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
@@ -46,6 +47,11 @@ class MainClass {
       {
         //Chamando Método Fazer Pedido 
         pedido.FazerPedido();
+      }
+
+      if (opcao == "6")
+      {
+        entrega.CalcularCombustivel();
       }
   }
 }
