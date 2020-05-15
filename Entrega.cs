@@ -1,13 +1,16 @@
 using System;
 using System.IO;
 class Entrega{
-  //Levar em consideração ficha técnica da Honda CG 150 Titan EX Mix Flex 2010 a 2015
+  /*Levar em consideração ficha técnica da Honda CG 150 
+  Tanque: 15,6 litros
+  Km/litro: 40km
+  */
   
   private double distanciaKM;
   private double litrosGasolina;
   private double precoLitro;
 
-  public void DistanciaKM
+  public double DistanciaKM
   {
     get{
       return distanciaKM;
@@ -17,7 +20,7 @@ class Entrega{
     }
   }
 
-  public void LitrosGasolina
+  public double LitrosGasolina
   {
     get{
     return litrosGasolina;
@@ -27,9 +30,14 @@ class Entrega{
     }
   }
 
-  public void PrecoLitro
+  public double PrecoLitro
   {
-    
+    get{
+      return precoLitro;
+    }
+    set{
+      precoLitro = value;
+    }
   }
 
 

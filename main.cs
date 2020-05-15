@@ -38,39 +38,6 @@ class MainClass {
       {
         pedido.FazerPedido();
       }
-
-      
-              
-             
-    
-
-      /*
-      Console.WriteLine();
-      Console.WriteLine();
-      //Registrar pedido
-      Console.WriteLine("** PEDIDO **");
-      Console.WriteLine(">> Gostaria de utilizar o último cadastro efetuado de cliente para iniciar pedido? (s/n) ");
-      opcao = Console.ReadLine();
-      if (opcao == "s"){
-      string[] lines1 = File.ReadAllLines("cadastro.txt");
-
-        foreach(var line in lines1 ) Console.WriteLine(line);
-        Console.WriteLine(">> Informe o código do produto, quantidade desejada e o código do sabor: ");
-  }     
-      else{
-        Console.WriteLine(">> Gostaria de utilizar os cadastros anteriores de clientes? (s/n)");
-        opcao = Console.ReadLine();
-        if(opcao == "s"){
-          string[] lines2 = File.ReadAllLines("clientescadastrados.txt");
-
-        foreach(var line in lines2 ) Console.WriteLine(line);
-        
-        Console.WriteLine(">> Informe o código do cliente desejado: ");
-        opcao = Console.ReadLine();
-        }
-      }  */      
-
-    
   }
 }
             
