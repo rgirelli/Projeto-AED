@@ -35,7 +35,7 @@ class MainClass {
       if (opcao == "3")
       { 
        // Chamando Método Cadastrar Cliente
-        c.CadastrarCliente();
+        c.CadastrarClienteFisico();
       }
 
       if (opcao == "4")

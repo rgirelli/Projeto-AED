@@ -5,11 +5,11 @@ using System.IO;
 //Classe Cliente 
 class Cliente{
   // Atributos da classe cliente
-  private string nome;
-  private string endereco;
-  private string telefone;
-  private string email;
-  private string dataNascimento;
+  protected string nome;
+  protected string endereco;
+  protected string telefone;
+  protected string email;
+  
   
   //Tornando os atributos publicos para serem utilizados 
   public string Nome{
@@ -56,12 +56,12 @@ class Cliente{
       dataNascimento = value;
     }
   }
-
+/*
   public void CadastrarCliente()
   {
     
     //Coleta de Dados para armazenar no arquivo txt
-    Console.WriteLine("**CADASTRO DO CLIENTE**");
+        Console.WriteLine("**CADASTRO DO CLIENTE**");
         Console.Write("Nome: ");
         Nome = Console.ReadLine();
         Console.Write("Endereço: ");
@@ -73,7 +73,7 @@ class Cliente{
         Console.Write("Data de nascimento: ");
         DataNascimento = Console.ReadLine();
         File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +Nome + "\nEndereco: " +Endereco + "\nTelefone: "+Telefone +"\nE-mail: " +Email + "\nData de nascimento: " +DataNascimento);
-  }
+  }*/
   
   
   public void ClientesCadastrados()
@@ -88,6 +88,8 @@ class Cliente{
   {
     Console.WriteLine("Cadastro efetuado com sucesso!");
   }
+
+  
   
   
 }
