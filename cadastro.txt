@@ -1,8 +1,7 @@
-// Arquivo txt que os dados de cliente ficam salvos
-
 **CADASTRO DO CLIENTE**
-Nome: sdfdsfdsfdsf
-Endereco: sdgsdfdsfsdf
-Telefone: s222;11Rdfsdfsdf
-E-mail: sdfsdfsd
-Data de nascimento: sdf
+Nome: raquel
+Endereco: av meu cu
+Telefone: tenho
+E-mail: tbm
+Data de nascimento: 170498
+CPF: 17697612763

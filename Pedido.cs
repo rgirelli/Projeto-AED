@@ -67,25 +67,25 @@ class Pedido{
     if (CodigoProduto == "1")
     {
       total = 13*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Fatia\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+ "\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Fatia\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+ "\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "2")
     {
       total = 10*Qtd; 
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Bolo no pote\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Bolo no pote\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "3")
     {
       total = 7*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Cone Trufado\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Cone Trufado\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "4")
     {
       total = 2.5*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Trufa\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Trufa\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
 
@@ -105,25 +105,25 @@ class Pedido{
     if (CodigoProduto == "1")
     {
       total = 13*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Fatia\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+ "\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Fatia\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+ "\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "2")
     {
       total = 10*Qtd; 
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Bolo no pote\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Bolo no pote\n>> Quantidade: "+Qtd+ "\n>> Sabor escolhido: " +Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "3")
     {
       total = 7*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Cone Trufado\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Cone Trufado\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
     if (CodigoProduto == "4")
     {
       total = 2.5*Qtd;
-      Console.WriteLine("DETALHES DO PEDIDO:\n>> Produto: Trufa\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
+      Console.WriteLine(">> DETALHES DO PEDIDO:\n>> Produto: Trufa\n>> Quantidade: "+Qtd+ "\n>> Sabor: "+Sabor+"\n>> Valor total do pedido: R$"+total.ToString("F2"));
     }
 
 
@@ -131,6 +131,8 @@ class Pedido{
     continuar = Console.ReadLine();
     }
     Console.WriteLine(">> Pedido encerrado. ");
+
+  
     
   }
 

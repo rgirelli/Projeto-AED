@@ -12,12 +12,15 @@ class MainClass {
       Pedido pedido = new Pedido();
       Entrega entrega = new Entrega();
       Estoque estoque = new Estoque();
+      ClienteFisico cf = new ClienteFisico();
+      ClienteJuridico cj = new ClienteJuridico();
+      Recibo recibo= new Recibo();
       
       //Inicialização
-      Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
-      Console.WriteLine(">> Selecione a opção desejada para prosseguir: ");
+      Console.WriteLine("** Bem vindo ao seu assistente pessoal de confeitaria.**\n");
+      Console.WriteLine("\n>> Selecione a opção desejada para prosseguir: ");
       Console.WriteLine();
-      Console.WriteLine("1- Exibir cardápio\n2- Exibir clientes cadastrados\n3- Cadastrar cliente\n4- Consultar preço\n5- Registrar pedido\n6- Entrega\n7- Exibir estoque\n8- Compras (reposição de estoque)");
+      Console.WriteLine("1- Exibir cardápio\n2- Exibir clientes cadastrados\n3- Cadastrar cliente\n4- Consultar preço\n5- Registrar pedido\n6- Entrega\n7- Exibir estoque\n");
       opcao = Console.ReadLine();
 
       // Menu Interativo do usuário
@@ -35,9 +38,16 @@ class MainClass {
       if (opcao == "3")
       { 
        // Chamando Método Cadastrar Cliente
-        c.CadastrarClienteFisico();
+       Console.WriteLine("\n>> Selecione 1 para Cliente Físico ou 2 para Cliente Jurídico: ");
+       opcao = Console.ReadLine();
+        if (opcao == "1"){
+          cf.CadastrarFisico();
+       }
+        if (opcao == "2"){
+          cj.CadastrarJuridico();
+        }
+       
       }
-
       if (opcao == "4")
       {
         //Chamando Método Consultar Preço
@@ -47,7 +57,10 @@ class MainClass {
       if (opcao == "5")
       {
         //Chamando Método Fazer Pedido 
+        recibo.CriarRecibo();
         pedido.FazerPedido();
+        recibo.ImprimirDados();        
+
       }
 
       if (opcao == "6")

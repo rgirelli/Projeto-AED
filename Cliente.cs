@@ -48,32 +48,8 @@ class Cliente{
     }
   }
 
-  public string DataNascimento{
-    get{
-      return dataNascimento;
-    }
-    set{
-      dataNascimento = value;
-    }
-  }
-/*
-  public void CadastrarCliente()
-  {
-    
-    //Coleta de Dados para armazenar no arquivo txt
-        Console.WriteLine("**CADASTRO DO CLIENTE**");
-        Console.Write("Nome: ");
-        Nome = Console.ReadLine();
-        Console.Write("Endereço: ");
-        Endereco = Console.ReadLine();
-        Console.Write("Telefone: ");
-        Telefone = Console.ReadLine();
-        Console.Write("E-mail: ");
-        Email = Console.ReadLine();
-        Console.Write("Data de nascimento: ");
-        DataNascimento = Console.ReadLine();
-        File.WriteAllText("cadastro.txt", "**CADASTRO DO CLIENTE**\nNome: " +Nome + "\nEndereco: " +Endereco + "\nTelefone: "+Telefone +"\nE-mail: " +Email + "\nData de nascimento: " +DataNascimento);
-  }*/
+  
+
   
   
   public void ClientesCadastrados()
