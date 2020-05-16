@@ -11,6 +11,7 @@ class MainClass {
       Produto p = new Produto();
       Pedido pedido = new Pedido();
       Entrega entrega = new Entrega();
+      Estoque estoque = new Estoque();
       
       //Inicialização
       Console.WriteLine(">> Bem vindo ao seu assistente pessoal de confeitaria.\n");
@@ -52,6 +53,11 @@ class MainClass {
       if (opcao == "6")
       {
         entrega.CalcularCombustivel();
+      }
+
+      if (opcao == "7")
+      {
+        estoque.ExibirEstoque();
       }
   }
 }

@@ -2,14 +2,14 @@
 using System;
 
 //Classe produto
-class Produto{
+class Produto : Estoque{
   
 //atributos da classe produto
-  private string nomeProduto;
+  protected string nomeProduto;
   private string codigoProduto;
   private double valorProduto;
-  private int quantidadeProduto;
-  private string opcao; 
+  protected int quantidadeProduto;
+  string opcao; 
 
 
 //Tornando os atributos publicos para serem utilizados 

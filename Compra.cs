@@ -1,35 +1,18 @@
+//Essa classe serve como um registro de compra de matéria prima, permitindo que o usuário registre itens, quantidades e valores unitários. Visa auxiliar o controle financeiro e servir de comparativo para as outras compras de material.
+//Classe compra herda métodos e atributos da classe Estoque
+using System;
+using System.IO;
 class Compra{
-  public string descricaoItem;
-  public double precoItem;
-  public int qtdItem;
 
-  //metodo para calcular valor total da Compra
-  //metodo para adicionar ao estoque 
-
-  public string DescricaoItem{
+  private double precoUnitario;
+  
+  public double PrecoUnitario{
     get{
-      return descricaoItem;
+      return precoUnitario;
     }
     set{
-      descricaoItem = value;
+      precoUnitario = value;
     }
   }
 
-  public double PrecoItem{
-    get{
-      return precoItem;
-    }
-    set{
-      precoItem = value;
-    }
-  }
-
-  public int QtdItem{
-    get{
-      return qtdItem;
-    }
-    set{
-      qtdItem = value;
-    }
-  }
 }
