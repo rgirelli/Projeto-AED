@@ -1,9 +1,10 @@
 using System;
 using System.IO;
-
+// a classe cliente juridico é classe filha de cliente 
 class ClienteJuridico : Cliente{
   protected string cnpj;
 
+// tornando os arquivos publicos para serem trabalhados 
   public string Cnpj{
     get{
       return cnpj;
@@ -12,7 +13,7 @@ class ClienteJuridico : Cliente{
       cnpj = value;
     }
   }
-
+    // puxando dados necessários da classe pai cliente
    public void CadastrarJuridico(){
     
         Console.WriteLine("**CADASTRO DE CLIENTE JURÍDICO**");

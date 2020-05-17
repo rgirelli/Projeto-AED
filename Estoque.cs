@@ -22,7 +22,7 @@
       qtdItem = value;
     }
   }
-
+    //comando para percorrer txt e guardar variáveis
   public void ExibirEstoque(){
     Console.WriteLine("\n**INVENTÁRIO DE MATÉRIA PRIMA**\n");
     string[] lines = File.ReadAllLines("estoque.txt");

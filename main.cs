@@ -62,12 +62,12 @@ class MainClass {
         recibo.ImprimirDados();        
 
       }
-
+      // condicional para executar classe para calcular combustivel
       if (opcao == "6")
       {
         entrega.CalcularCombustivel();
       }
-
+      // condicional para exibir estoque
       if (opcao == "7")
       {
         estoque.ExibirEstoque();

@@ -59,7 +59,7 @@ class Cliente{
 
       foreach(var line in lines) Console.WriteLine(line);
   }
-
+  // o cadastro é efetuado e guardado dentro do txt
   public void EfetuarCadastro()
   {
     Console.WriteLine("Cadastro efetuado com sucesso!");

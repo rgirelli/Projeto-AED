@@ -5,12 +5,13 @@ class Entrega{
   Tanque: 15,6 litros
   Km/litro: 40km
   */
-  
+  // Atributos da classe entrega
   private double distanciaKM;
   private double litrosGasolina;
   private double precoLitro;
   private double taxaEntrega;
 
+  //tornando os atributos públicos para serem utilizados dentro da classe
   public double DistanciaKM
   {
     get{

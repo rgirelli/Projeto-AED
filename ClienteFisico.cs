@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-
+// cliente fisico é classe filha de cliente
 class ClienteFisico : Cliente {
   protected string dataNascimento;
   protected string cpf;
 
-
+    // tornando arquivos publicos para serem manipulados 
   public string DataNascimento{
     get {
       return dataNascimento;
@@ -31,7 +31,7 @@ class ClienteFisico : Cliente {
 
        
   
-
+    // utilizandos dados da herança da classe cliente
   public void CadastrarFisico(){
     
         Console.WriteLine("**CADASTRO DE CLIENTE FÍSICO**");
